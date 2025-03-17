@@ -1,0 +1,116 @@
+/* Reset Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Red Accent Color */
+.red-text {
+    color: #ff4d4d;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 100px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact Title */
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Red Underline for Contact Title */
+.contact h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #ff4d4d;
+    display: block;
+    margin: 10px auto;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.desc {
+    max-width: 600px;
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+/* Contact Form */
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #00ff99;
+    margin: 10px 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbb;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #ff4d4d;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Button Hover */
+.submit-btn:hover {
+    background: white;
+    color: #ff4d4d;
+    box-shadow: 0 0 15px #ff4d4d;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact {
+        padding: 50px 10px;
+    }
+}

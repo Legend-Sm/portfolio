@@ -1,0 +1,150 @@
+/* Reset Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Red Accent Color */
+.red-text {
+    color: #ff4d4d;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+/* Navigation Hover Effect */
+.nav-links a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: #ff4d4d;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #ff4d4d;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 100px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Red Underline for Contact Title */
+.contact h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #ff4d4d;
+    display: block;
+    margin: 10px auto;
+}
+
+.contact p {
+    font-size: 20px;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+/* Glowing "Let's Chat" Button */
+.chat-btn {
+    background: white;
+    color: #ff4d4d;
+    font-size: 18px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+/* Glowing Effect on Hover */
+.chat-btn:hover {
+    box-shadow: 0 0 20px #ff4d4d;
+    background: #ff4d4d;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 5%;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+}

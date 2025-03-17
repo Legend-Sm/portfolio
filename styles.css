@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* 🔹 Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 10%;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ff4d4d;
+}
+
+/* 🔹 Navbar Menu */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #ff4d4d;
+}
+
+/* 🔹 Navbar Underline Effect */
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #ff4d4d;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* 🔹 Hide Hamburger on Desktop */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 🔹 About Section */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 100px 10%;
+    margin-top: 80px; /* To avoid overlap with navbar */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* 🔹 Profile Image */
+.about-img img {
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgba(255, 77, 77, 0.7);
+    animation: flaot infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* 🔹 About Content */
+.about-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.underline {
+    width: 80px;
+    height: 3px;
+    background: #ff4d4d;
+    margin: 5px 0 15px;
+}
+
+.about-content h3 {
+    font-size: 26px;
+    color: #ff4d4d;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* 🔹 Download CV Button */
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: white;
+    background: #ff4d4d;
+    border: 2px solid #ff4d4d;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.download-btn:hover {
+    background: transparent;
+    color: #ff4d4d;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 50%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        text-align: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-menu a {
+        padding: 15px;
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+}
